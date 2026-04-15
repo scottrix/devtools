@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTheme();
 });
 
+function toggleMobileMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-items a');
     navLinks.forEach(link => {
@@ -14,6 +21,9 @@ function initNavigation() {
             e.preventDefault();
             const toolId = this.getAttribute('data-tool');
             showTool(toolId);
+            if (window.innerWidth <= 768) {
+                toggleMobileMenu();
+            }
         });
     });
 
