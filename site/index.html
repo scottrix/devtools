@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools - Developer Utilities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="sidebar">
+        <div class="logo">
+            <h1>DevTools</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+        <ul class="nav-categories">
+            <li class="category">
+                <span class="category-header" onclick="toggleCategory(this)">
+                    <span class="icon">📝</span> Text & String
+                    <span class="arrow">▼</span>
+                </span>
+                <ul class="nav-items">
+                    <li><a href="#" data-tool="case-converter">Case Converter</a></li>
+                    <li><a href="#" data-tool="json-formatter">JSON Formatter</a></li>
+                    <li><a href="#" data-tool="diff-checker">Diff Checker</a></li>
+                    <li><a href="#" data-tool="lorem-ipsum">Lorem Ipsum</a></li>
+                    <li><a href="#" data-tool="whitespace-remover">Whitespace Remover</a></li>
+                    <li><a href="#" data-tool="regex-tester">RegEx Tester</a></li>
+                    <li><a href="#" data-tool="base64">Base64 Encoder/Decoder</a></li>
+                    <li><a href="#" data-tool="hex-string">Hex ↔ String</a></li>
+                </ul>
+            </li>
+            <li class="category">
+                <span class="category-header" onclick="toggleCategory(this)">
+                    <span class="icon">🎨</span> Web & Frontend
+                    <span class="arrow">▼</span>
+                </span>
+                <ul class="nav-items">
+                    <li><a href="#" data-tool="color-converter">Color Converter</a></li>
+                    <li><a href="#" data-tool="pixel-rem">Pixel to REM/EM</a></li>
+                    <li><a href="#" data-tool="css-grid">CSS Grid Generator</a></li>
+                    <li><a href="#" data-tool="svg-optimizer">SVG Optimizer</a></li>
+                    <li><a href="#" data-tool="url-encoder">URL Encoder/Decoder</a></li>
+                    <li><a href="#" data-tool="html-entity">HTML Entity Encoder</a></li>
+                </ul>
+            </li>
+            <li class="category">
+                <span class="category-header" onclick="toggleCategory(this)">
+                    <span class="icon">📊</span> Data Converters
+                    <span class="arrow">▼</span>
+                </span>
+                <ul class="nav-items">
+                    <li><a href="#" data-tool="json-csv">JSON ↔ CSV</a></li>
+                    <li><a href="#" data-tool="json-yaml">JSON ↔ YAML</a></li>
+                    <li><a href="#" data-tool="xml-json">XML ↔ JSON</a></li>
+                    <li><a href="#" data-tool="sql-formatter">SQL Formatter</a></li>
+                    <li><a href="#" data-tool="markdown-preview">Markdown Preview</a></li>
+                </ul>
+            </li>
+            <li class="category">
+                <span class="category-header" onclick="toggleCategory(this)">
+                    <span class="icon">🔐</span> Security
+                    <span class="arrow">▼</span>
+                </span>
+                <ul class="nav-items">
+                    <li><a href="#" data-tool="password-generator">Password Generator</a></li>
+                    <li><a href="#" data-tool="hash-generator">Hash Generator</a></li>
+                    <li><a href="#" data-tool="jwt-debugger">JWT Debugger</a></li>
+                    <li><a href="#" data-tool="uuid-generator">UUID Generator</a></li>
+                </ul>
+            </li>
+            <li class="category">
+                <span class="category-header" onclick="toggleCategory(this)">
+                    <span class="icon">🔢</span> Math & Logic
+                    <span class="arrow">▼</span>
+                </span>
+                <ul class="nav-items">
+                    <li><a href="#" data-tool="calculator">Calculator</a></li>
+                    <li><a href="#" data-tool="base-converter">Base Converter</a></li>
+                    <li><a href="#" data-tool="timestamp">Unix Timestamp</a></li>
+                    <li><a href="#" data-tool="bitwise">Bitwise Calculator</a></li>
+                    <li><a href="#" data-tool="big-o">Big O Cheat Sheet</a></li>
+                    <li><a href="#" data-tool="prime-numbers">Prime Numbers</a></li>
+                    <li><a href="#" data-tool="ascii-table">ASCII Table</a></li>
+                </ul>
+            </li>
+            <li class="category">
+                <span class="category-header" onclick="toggleCategory(this)">
+                    <span class="icon">🖥️</span> DevOps & Network
+                    <span class="arrow">▼</span>
+                </span>
+                <ul class="nav-items">
+                    <li><a href="#" data-tool="cron-generator">Cron Generator</a></li>
+                    <li><a href="#" data-tool="ip-calculator">IP Calculator</a></li>
+                    <li><a href="#" data-tool="http-status">HTTP Status Codes</a></li>
+                    <li><a href="#" data-tool="curl-converter">Curl to Fetch</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="mailto:support@devtools.example.com" class="contact-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Report an Issue
+            </a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div id="welcome" class="tool-panel active">
+            <h2>Welcome to DevTools</h2>
+            <p>Select a tool from the sidebar to get started.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <h3>Text Tools</h3>
+                    <p>Case conversion, JSON formatting, diff checking, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3>Web Tools</h3>
+                    <p>Color conversion, CSS generators, URL encoding.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Data Tools</h3>
+                    <p>Convert between JSON, CSV, YAML, XML formats.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔐</span>
+                    <h3>Security Tools</h3>
+                    <p>Password generation, hashing, JWT debugging.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔢</span>
+                    <h3>Math Tools</h3>
+                    <p>Base conversion, timestamps, bitwise operations.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🖥️</span>
+                    <h3>DevOps Tools</h3>
+                    <p>Cron expressions, IP calculations, HTTP codes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="case-converter" class="tool-panel">
+            <h2>Case Converter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input Text:</label>
+                    <textarea id="case-input" placeholder="Enter your text here..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="convertCase('camel')">camelCase</button>
+                    <button onclick="convertCase('snake')">snake_case</button>
+                    <button onclick="convertCase('pascal')">PascalCase</button>
+                    <button onclick="convertCase('kebab')">kebab-case</button>
+                    <button onclick="convertCase('upper')">UPPERCASE</button>
+                    <button onclick="convertCase('lower')">lowercase</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="case-output" readonly></textarea>
+                    <button onclick="copyToClipboard('case-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="json-formatter" class="tool-panel">
+            <h2>JSON Formatter / Validator</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input JSON:</label>
+                    <textarea id="json-input" placeholder='{"key": "value"}'></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="formatJSON()">Format</button>
+                    <button onclick="minifyJSON()">Minify</button>
+                    <button onclick="validateJSON()">Validate</button>
+                </div>
+                <div id="json-status" class="status-message"></div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="json-output" readonly></textarea>
+                    <button onclick="copyToClipboard('json-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="diff-checker" class="tool-panel">
+            <h2>Diff Checker</h2>
+            <div class="tool-container diff-container">
+                <div class="diff-panel">
+                    <label>Original Text:</label>
+                    <textarea id="diff-input1" placeholder="Enter original text..."></textarea>
+                </div>
+                <div class="diff-panel">
+                    <label>Modified Text:</label>
+                    <textarea id="diff-input2" placeholder="Enter modified text..."></textarea>
+                </div>
+            </div>
+            <div class="button-group">
+                <button onclick="computeDiff()">Compare</button>
+            </div>
+            <div id="diff-output" class="diff-output"></div>
+        </div>
+
+        <div id="lorem-ipsum" class="tool-panel">
+            <h2>Lorem Ipsum Generator</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <div class="form-row">
+                        <label>Paragraphs:</label>
+                        <input type="number" id="lorem-paragraphs" value="3" min="1" max="20">
+                    </div>
+                    <div class="form-row">
+                        <label>Type:</label>
+                        <select id="lorem-type">
+                            <option value="paragraphs">Paragraphs</option>
+                            <option value="sentences">Sentences</option>
+                            <option value="words">Words</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Start with "Lorem ipsum...":</label>
+                        <input type="checkbox" id="lorem-start" checked>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="generateLorem()">Generate</button>
+                </div>
+                <div class="output-section">
+                    <textarea id="lorem-output" readonly></textarea>
+                    <button onclick="copyToClipboard('lorem-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="whitespace-remover" class="tool-panel">
+            <h2>Whitespace Remover</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input Text:</label>
+                    <textarea id="ws-input" placeholder="Enter text with extra whitespace..."></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="ws-trailing" checked> Remove trailing spaces</label>
+                    <label><input type="checkbox" id="ws-double" checked> Remove double spaces</label>
+                    <label><input type="checkbox" id="ws-empty" checked> Remove empty lines</label>
+                    <label><input type="checkbox" id="ws-leading"> Remove leading spaces</label>
+                </div>
+                <div class="button-group">
+                    <button onclick="removeWhitespace()">Process</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="ws-output" readonly></textarea>
+                    <button onclick="copyToClipboard('ws-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="regex-tester" class="tool-panel">
+            <h2>RegEx Tester</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <div class="form-row">
+                        <label>Pattern:</label>
+                        <input type="text" id="regex-pattern" placeholder="Enter regex pattern...">
+                    </div>
+                    <div class="form-row">
+                        <label>Flags:</label>
+                        <div class="flag-checkboxes">
+                            <label><input type="checkbox" id="flag-g" checked> g (global)</label>
+                            <label><input type="checkbox" id="flag-i"> i (case insensitive)</label>
+                            <label><input type="checkbox" id="flag-m"> m (multiline)</label>
+                        </div>
+                    </div>
+                    <label>Test String:</label>
+                    <textarea id="regex-input" placeholder="Enter test string..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="testRegex()">Test</button>
+                </div>
+                <div id="regex-output" class="regex-output">
+                    <div class="matches-section">
+                        <h4>Matches:</h4>
+                        <div id="regex-matches"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="base64" class="tool-panel">
+            <h2>Base64 Encoder / Decoder</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="base64-input" placeholder="Enter text to encode or Base64 to decode..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="encodeBase64()">Encode</button>
+                    <button onclick="decodeBase64()">Decode</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="base64-output" readonly></textarea>
+                    <button onclick="copyToClipboard('base64-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="hex-string" class="tool-panel">
+            <h2>Hex ↔ String Converter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="hex-input" placeholder="Enter text or hex string (e.g., 48656c6c6f)"></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="hex-spaces" checked> Add spaces between hex bytes</label>
+                    <label><input type="checkbox" id="hex-uppercase"> Uppercase hex letters</label>
+                </div>
+                <div class="button-group">
+                    <button onclick="stringToHex()">String → Hex</button>
+                    <button onclick="hexToString()">Hex → String</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="hex-output" readonly></textarea>
+                    <button onclick="copyToClipboard('hex-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="color-converter" class="tool-panel">
+            <h2>Color Converter</h2>
+            <div class="tool-container">
+                <div class="color-preview-section">
+                    <div class="color-preview" id="color-preview"></div>
+                    <input type="color" id="color-picker" value="#4A90D9">
+                </div>
+                <div class="input-section">
+                    <div class="form-row">
+                        <label>HEX:</label>
+                        <input type="text" id="color-hex" placeholder="#4A90D9">
+                    </div>
+                    <div class="form-row">
+                        <label>RGB:</label>
+                        <input type="text" id="color-rgb" placeholder="rgb(74, 144, 217)">
+                    </div>
+                    <div class="form-row">
+                        <label>HSL:</label>
+                        <input type="text" id="color-hsl" placeholder="hsl(210, 65%, 57%)">
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="convertColor('hex')">From HEX</button>
+                    <button onclick="convertColor('rgb')">From RGB</button>
+                    <button onclick="convertColor('hsl')">From HSL</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="pixel-rem" class="tool-panel">
+            <h2>Pixel to REM / EM Converter</h2>
+            <div class="tool-container">
+                <div class="form-row">
+                    <label>Base Font Size (px):</label>
+                    <input type="number" id="base-font-size" value="16" min="1">
+                </div>
+                <div class="converter-grid">
+                    <div class="converter-col">
+                        <h4>Pixels</h4>
+                        <input type="number" id="px-value" placeholder="Enter px">
+                        <div class="button-group vertical">
+                            <button onclick="pxToRem()">Convert to REM →</button>
+                            <button onclick="pxToEm()">Convert to EM →</button>
+                        </div>
+                    </div>
+                    <div class="converter-col">
+                        <h4>REM</h4>
+                        <input type="number" id="rem-value" placeholder="Enter rem" step="0.001">
+                        <button onclick="remToPx()">← Convert to PX</button>
+                    </div>
+                </div>
+                <div id="px-result" class="result-display"></div>
+            </div>
+        </div>
+
+        <div id="css-grid" class="tool-panel">
+            <h2>CSS Grid Generator</h2>
+            <div class="tool-container">
+                <div class="grid-controls">
+                    <div class="form-row">
+                        <label>Columns:</label>
+                        <input type="number" id="grid-cols" value="3" min="1" max="12">
+                    </div>
+                    <div class="form-row">
+                        <label>Rows:</label>
+                        <input type="number" id="grid-rows" value="2" min="1" max="12">
+                    </div>
+                    <div class="form-row">
+                        <label>Gap (px):</label>
+                        <input type="number" id="grid-gap" value="20" min="0" max="100">
+                    </div>
+                    <div class="form-row">
+                        <label>Column Width:</label>
+                        <select id="grid-col-type">
+                            <option value="fr">fr (flexible)</option>
+                            <option value="px">px (fixed)</option>
+                            <option value="%">% (percentage)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="generateGrid()">Generate</button>
+                </div>
+                <div class="grid-preview" id="grid-preview"></div>
+                <div class="output-section">
+                    <label>CSS Code:</label>
+                    <textarea id="grid-output" readonly></textarea>
+                    <button onclick="copyToClipboard('grid-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="svg-optimizer" class="tool-panel">
+            <h2>SVG Optimizer</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input SVG:</label>
+                    <textarea id="svg-input" placeholder="Paste your SVG code..."></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="svg-remove-comments" checked> Remove comments</label>
+                    <label><input type="checkbox" id="svg-remove-metadata" checked> Remove metadata</label>
+                    <label><input type="checkbox" id="svg-collapse-whitespace" checked> Collapse whitespace</label>
+                </div>
+                <div class="button-group">
+                    <button onclick="optimizeSvg()">Optimize</button>
+                </div>
+                <div class="stats-row">
+                    <span>Original: <strong id="svg-original-size">0</strong> bytes</span>
+                    <span>Optimized: <strong id="svg-optimized-size">0</strong> bytes</span>
+                    <span>Saved: <strong id="svg-saved">0</strong>%</span>
+                </div>
+                <div class="output-section">
+                    <label>Output SVG:</label>
+                    <textarea id="svg-output" readonly></textarea>
+                    <button onclick="copyToClipboard('svg-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="url-encoder" class="tool-panel">
+            <h2>URL Encoder / Decoder</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="url-input" placeholder="Enter URL or encoded string..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="encodeURL()">Encode</button>
+                    <button onclick="decodeURL()">Decode</button>
+                    <button onclick="encodeURLComponent()">Encode Component</button>
+                    <button onclick="decodeURLComponent()">Decode Component</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="url-output" readonly></textarea>
+                    <button onclick="copyToClipboard('url-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="html-entity" class="tool-panel">
+            <h2>HTML Entity Encoder / Decoder</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="entity-input" placeholder="Enter text with < > & etc. or HTML entities..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="encodeHTMLEntities()">Encode</button>
+                    <button onclick="decodeHTMLEntities()">Decode</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="entity-output" readonly></textarea>
+                    <button onclick="copyToClipboard('entity-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="json-csv" class="tool-panel">
+            <h2>JSON ↔ CSV Converter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="json-csv-input" placeholder="Paste JSON array or CSV data..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="jsonToCSV()">JSON → CSV</button>
+                    <button onclick="csvToJSON()">CSV → JSON</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="json-csv-output" readonly></textarea>
+                    <button onclick="copyToClipboard('json-csv-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="json-yaml" class="tool-panel">
+            <h2>JSON ↔ YAML Converter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="json-yaml-input" placeholder="Paste JSON or YAML..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="jsonToYAML()">JSON → YAML</button>
+                    <button onclick="yamlToJSON()">YAML → JSON</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="json-yaml-output" readonly></textarea>
+                    <button onclick="copyToClipboard('json-yaml-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="xml-json" class="tool-panel">
+            <h2>XML ↔ JSON Converter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input:</label>
+                    <textarea id="xml-json-input" placeholder="Paste XML or JSON..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="xmlToJSON()">XML → JSON</button>
+                    <button onclick="jsonToXML()">JSON → XML</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="xml-json-output" readonly></textarea>
+                    <button onclick="copyToClipboard('xml-json-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sql-formatter" class="tool-panel">
+            <h2>SQL Formatter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input SQL:</label>
+                    <textarea id="sql-input" placeholder="SELECT * FROM users WHERE id = 1"></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="formatSQL()">Format SQL</button>
+                </div>
+                <div class="output-section">
+                    <label>Formatted SQL:</label>
+                    <textarea id="sql-output" readonly></textarea>
+                    <button onclick="copyToClipboard('sql-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="markdown-preview" class="tool-panel">
+            <h2>Markdown Preview</h2>
+            <div class="tool-container markdown-container">
+                <div class="markdown-panel">
+                    <label>Markdown:</label>
+                    <textarea id="md-input" placeholder="# Heading&#10;&#10;Write **bold** or *italic* text..."></textarea>
+                </div>
+                <div class="markdown-panel">
+                    <label>Preview:</label>
+                    <div id="md-output" class="markdown-preview-area"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="password-generator" class="tool-panel">
+            <h2>Password Generator</h2>
+            <div class="tool-container">
+                <div class="password-options">
+                    <div class="form-row">
+                        <label>Length:</label>
+                        <input type="range" id="pwd-length" min="8" max="64" value="16" oninput="updateLengthDisplay()">
+                        <span id="pwd-length-display">16</span>
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="pwd-upper" checked> Uppercase (A-Z)</label>
+                        <label><input type="checkbox" id="pwd-lower" checked> Lowercase (a-z)</label>
+                        <label><input type="checkbox" id="pwd-numbers" checked> Numbers (0-9)</label>
+                        <label><input type="checkbox" id="pwd-symbols" checked> Symbols (!@#$%)</label>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="generatePassword()">Generate Password</button>
+                </div>
+                <div class="output-section">
+                    <label>Generated Password:</label>
+                    <div class="password-display">
+                        <input type="text" id="pwd-output" readonly>
+                        <button onclick="copyToClipboard('pwd-output')" class="copy-btn">Copy</button>
+                    </div>
+                    <div class="strength-meter">
+                        <div id="pwd-strength" class="strength-bar"></div>
+                        <span id="pwd-strength-text">Strength: --</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hash-generator" class="tool-panel">
+            <h2>Hash Generator</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Input Text:</label>
+                    <textarea id="hash-input" placeholder="Enter text to hash..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="generateHash('MD5')">MD5</button>
+                    <button onclick="generateHash('SHA-1')">SHA-1</button>
+                    <button onclick="generateHash('SHA-256')">SHA-256</button>
+                    <button onclick="generateHash('SHA-512')">SHA-512</button>
+                </div>
+                <div class="hash-results">
+                    <div class="form-row">
+                        <label>MD5:</label>
+                        <input type="text" id="hash-md5" readonly>
+                        <button onclick="copyToClipboard('hash-md5')" class="copy-btn-sm">Copy</button>
+                    </div>
+                    <div class="form-row">
+                        <label>SHA-1:</label>
+                        <input type="text" id="hash-sha1" readonly>
+                        <button onclick="copyToClipboard('hash-sha1')" class="copy-btn-sm">Copy</button>
+                    </div>
+                    <div class="form-row">
+                        <label>SHA-256:</label>
+                        <input type="text" id="hash-sha256" readonly>
+                        <button onclick="copyToClipboard('hash-sha256')" class="copy-btn-sm">Copy</button>
+                    </div>
+                    <div class="form-row">
+                        <label>SHA-512:</label>
+                        <input type="text" id="hash-sha512" readonly>
+                        <button onclick="copyToClipboard('hash-sha512')" class="copy-btn-sm">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="jwt-debugger" class="tool-panel">
+            <h2>JWT Debugger</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>JWT Token:</label>
+                    <textarea id="jwt-input" placeholder="Paste your JWT token here..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="decodeJWT()">Decode</button>
+                </div>
+                <div class="jwt-sections">
+                    <div class="jwt-section">
+                        <h4>Header</h4>
+                        <textarea id="jwt-header" readonly></textarea>
+                    </div>
+                    <div class="jwt-section">
+                        <h4>Payload</h4>
+                        <textarea id="jwt-payload" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="uuid-generator" class="tool-panel">
+            <h2>UUID / GUID Generator</h2>
+            <div class="tool-container">
+                <div class="form-row">
+                    <label>Version:</label>
+                    <select id="uuid-version">
+                        <option value="v4">UUID v4 (Random)</option>
+                        <option value="v1">UUID v1 (Timestamp)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Quantity:</label>
+                    <input type="number" id="uuid-count" value="1" min="1" max="100">
+                </div>
+                <div class="button-group">
+                    <button onclick="generateUUID()">Generate</button>
+                </div>
+                <div class="output-section">
+                    <label>Generated UUIDs:</label>
+                    <textarea id="uuid-output" readonly></textarea>
+                    <button onclick="copyToClipboard('uuid-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="base-converter" class="tool-panel">
+            <h2>Base Converter</h2>
+            <div class="tool-container">
+                <div class="converter-grid">
+                    <div class="converter-col">
+                        <h4>Decimal</h4>
+                        <input type="text" id="base-decimal" placeholder="10">
+                    </div>
+                    <div class="converter-col">
+                        <h4>Binary</h4>
+                        <input type="text" id="base-binary" placeholder="1010">
+                    </div>
+                    <div class="converter-col">
+                        <h4>Hexadecimal</h4>
+                        <input type="text" id="base-hex" placeholder="A">
+                    </div>
+                    <div class="converter-col">
+                        <h4>Octal</h4>
+                        <input type="text" id="base-octal" placeholder="12">
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="convertFromBase('decimal')">Convert from Decimal</button>
+                    <button onclick="convertFromBase('binary')">Convert from Binary</button>
+                    <button onclick="convertFromBase('hex')">Convert from Hex</button>
+                    <button onclick="convertFromBase('octal')">Convert from Octal</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="calculator" class="tool-panel">
+            <h2>Calculator</h2>
+            <div class="tool-container">
+                <div class="calculator-display">
+                    <input type="text" id="calc-display" readonly value="0">
+                    <div id="calc-history" class="calc-history"></div>
+                </div>
+                <div class="calculator-buttons">
+                    <button onclick="calcClear()" class="calc-btn clear">C</button>
+                    <button onclick="calcBackspace()" class="calc-btn">⌫</button>
+                    <button onclick="calcInput('(')" class="calc-btn">(</button>
+                    <button onclick="calcInput(')')" class="calc-btn">)</button>
+                    <button onclick="calcInput('7')" class="calc-btn">7</button>
+                    <button onclick="calcInput('8')" class="calc-btn">8</button>
+                    <button onclick="calcInput('9')" class="calc-btn">9</button>
+                    <button onclick="calcInput('/')" class="calc-btn operator">÷</button>
+                    <button onclick="calcInput('4')" class="calc-btn">4</button>
+                    <button onclick="calcInput('5')" class="calc-btn">5</button>
+                    <button onclick="calcInput('6')" class="calc-btn">6</button>
+                    <button onclick="calcInput('*')" class="calc-btn operator">×</button>
+                    <button onclick="calcInput('1')" class="calc-btn">1</button>
+                    <button onclick="calcInput('2')" class="calc-btn">2</button>
+                    <button onclick="calcInput('3')" class="calc-btn">3</button>
+                    <button onclick="calcInput('-')" class="calc-btn operator">−</button>
+                    <button onclick="calcInput('0')" class="calc-btn zero">0</button>
+                    <button onclick="calcInput('.')" class="calc-btn">.</button>
+                    <button onclick="calcEquals()" class="calc-btn equals">=</button>
+                    <button onclick="calcInput('+')" class="calc-btn operator">+</button>
+                </div>
+                <div class="calc-scientific">
+                    <button onclick="calcFunc('sqrt')" class="calc-btn">√</button>
+                    <button onclick="calcFunc('pow')" class="calc-btn">x²</button>
+                    <button onclick="calcFunc('sin')" class="calc-btn">sin</button>
+                    <button onclick="calcFunc('cos')" class="calc-btn">cos</button>
+                    <button onclick="calcFunc('tan')" class="calc-btn">tan</button>
+                    <button onclick="calcFunc('log')" class="calc-btn">log</button>
+                    <button onclick="calcFunc('ln')" class="calc-btn">ln</button>
+                    <button onclick="calcConst('pi')" class="calc-btn">π</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="ascii-table" class="tool-panel">
+            <h2>ASCII Table</h2>
+            <div class="tool-container">
+                <div class="form-row">
+                    <label>Search:</label>
+                    <input type="text" id="ascii-search" placeholder="Search by character, code, or description..." oninput="filterAsciiTable()">
+                </div>
+                <div class="ascii-filters">
+                    <button onclick="filterAsciiCategory('all')" class="ascii-filter active">All</button>
+                    <button onclick="filterAsciiCategory('control')" class="ascii-filter">Control (0-31)</button>
+                    <button onclick="filterAsciiCategory('printable')" class="ascii-filter">Printable (32-126)</button>
+                    <button onclick="filterAsciiCategory('extended')" class="ascii-filter">Extended (128-255)</button>
+                </div>
+                <div class="table-container">
+                    <table class="ascii-table" id="ascii-table-content">
+                        <thead>
+                            <tr>
+                                <th>Dec</th>
+                                <th>Hex</th>
+                                <th>Oct</th>
+                                <th>Char</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ascii-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="timestamp" class="tool-panel">
+            <h2>Unix Timestamp Converter</h2>
+            <div class="tool-container">
+                <div class="current-timestamp">
+                    <span>Current Unix Timestamp: </span>
+                    <strong id="current-ts">--</strong>
+                </div>
+                <div class="converter-section">
+                    <div class="form-row">
+                        <label>Unix Timestamp:</label>
+                        <input type="text" id="ts-unix" placeholder="1699012345">
+                    </div>
+                    <div class="button-group">
+                        <button onclick="timestampToDate()">→ To Date</button>
+                        <button onclick="dateToTimestamp()">From Date →</button>
+                    </div>
+                    <div class="form-row">
+                        <label>Date:</label>
+                        <input type="datetime-local" id="ts-date">
+                    </div>
+                    <div class="form-row">
+                        <label>ISO 8601:</label>
+                        <input type="text" id="ts-iso" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>Readable:</label>
+                        <input type="text" id="ts-readable" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bitwise" class="tool-panel">
+            <h2>Bitwise Calculator</h2>
+            <div class="tool-container">
+                <div class="bitwise-inputs">
+                    <div class="form-row">
+                        <label>Number A:</label>
+                        <input type="number" id="bit-a" placeholder="Enter number">
+                        <input type="text" id="bit-a-bin" placeholder="Binary" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>Number B:</label>
+                        <input type="number" id="bit-b" placeholder="Enter number">
+                        <input type="text" id="bit-b-bin" placeholder="Binary" readonly>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="bitwiseOp('AND')">AND</button>
+                    <button onclick="bitwiseOp('OR')">OR</button>
+                    <button onclick="bitwiseOp('XOR')">XOR</button>
+                    <button onclick="bitwiseOp('NOT')">NOT A</button>
+                    <button onclick="bitwiseOp('LEFT')">A << B</button>
+                    <button onclick="bitwiseOp('RIGHT')">A >> B</button>
+                </div>
+                <div class="output-section">
+                    <label>Result:</label>
+                    <div class="form-row">
+                        <span>Decimal:</span>
+                        <input type="text" id="bit-result-dec" readonly>
+                    </div>
+                    <div class="form-row">
+                        <span>Binary:</span>
+                        <input type="text" id="bit-result-bin" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="big-o" class="tool-panel">
+            <h2>Big O Complexity Cheat Sheet</h2>
+            <div class="tool-container">
+                <div class="table-container">
+                    <table class="big-o-table">
+                        <thead>
+                            <tr>
+                                <th>Data Structure</th>
+                                <th>Access</th>
+                                <th>Search</th>
+                                <th>Insert</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Array</td><td>O(1)</td><td>O(n)</td><td>O(n)</td><td>O(n)</td></tr>
+                            <tr><td>Linked List</td><td>O(n)</td><td>O(n)</td><td>O(1)</td><td>O(1)</td></tr>
+                            <tr><td>Hash Table</td><td>N/A</td><td>O(1)</td><td>O(1)</td><td>O(1)</td></tr>
+                            <tr><td>Binary Search Tree</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td></tr>
+                            <tr><td>AVL Tree</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td></tr>
+                            <tr><td>B-Tree</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td></tr>
+                            <tr><td>Queue</td><td>O(n)</td><td>O(n)</td><td>O(1)</td><td>O(1)</td></tr>
+                            <tr><td>Stack</td><td>O(n)</td><td>O(n)</td><td>O(1)</td><td>O(1)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table class="big-o-table">
+                        <thead>
+                            <tr>
+                                <th>Sorting Algorithm</th>
+                                <th>Best</th>
+                                <th>Average</th>
+                                <th>Worst</th>
+                                <th>Space</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n)</td></tr>
+                            <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n²)</td><td>O(log n)</td></tr>
+                            <tr><td>Heap Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(1)</td></tr>
+                            <tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td></tr>
+                            <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td></tr>
+                            <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td></tr>
+                            <tr><td>Radix Sort</td><td>O(nk)</td><td>O(nk)</td><td>O(nk)</td><td>O(n+k)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="prime-numbers" class="tool-panel">
+            <h2>Prime Number Tool</h2>
+            <div class="tool-container">
+                <div class="form-row">
+                    <label>Mode:</label>
+                    <select id="prime-mode">
+                        <option value="check">Check if prime</option>
+                        <option value="generate">Generate primes in range</option>
+                    </select>
+                </div>
+                <div id="prime-check-section" class="prime-section">
+                    <div class="form-row">
+                        <label>Number:</label>
+                        <input type="number" id="prime-check-input" placeholder="Enter a number">
+                    </div>
+                    <div class="button-group">
+                        <button onclick="checkPrime()">Check</button>
+                    </div>
+                    <div id="prime-check-result" class="result-display"></div>
+                </div>
+                <div id="prime-gen-section" class="prime-section" style="display:none">
+                    <div class="form-row">
+                        <label>From:</label>
+                        <input type="number" id="prime-from" value="1" min="1">
+                    </div>
+                    <div class="form-row">
+                        <label>To:</label>
+                        <input type="number" id="prime-to" value="100" min="2">
+                    </div>
+                    <div class="button-group">
+                        <button onclick="generatePrimes()">Generate</button>
+                    </div>
+                    <div class="output-section">
+                        <label>Primes:</label>
+                        <textarea id="prime-output" readonly></textarea>
+                        <div class="stats-row">
+                            <span>Count: <strong id="prime-count">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cron-generator" class="tool-panel">
+            <h2>Cron Job Expression Generator</h2>
+            <div class="tool-container">
+                <div class="cron-builder">
+                    <div class="cron-row">
+                        <div class="form-row">
+                            <label>Minute:</label>
+                            <select id="cron-minute">
+                                <option value="*">Every minute (*)</option>
+                                <option value="0">At minute 0</option>
+                                <option value="*/5">Every 5 minutes</option>
+                                <option value="*/10">Every 10 minutes</option>
+                                <option value="*/15">Every 15 minutes</option>
+                                <option value="*/30">Every 30 minutes</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label>Hour:</label>
+                            <select id="cron-hour">
+                                <option value="*">Every hour (*)</option>
+                                <option value="0">At hour 0 (midnight)</option>
+                                <option value="6">At 6 AM</option>
+                                <option value="12">At noon</option>
+                                <option value="*/2">Every 2 hours</option>
+                                <option value="*/6">Every 6 hours</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cron-row">
+                        <div class="form-row">
+                            <label>Day of Month:</label>
+                            <select id="cron-dom">
+                                <option value="*">Every day (*)</option>
+                                <option value="1">On day 1</option>
+                                <option value="15">On day 15</option>
+                                <option value="*/2">Every 2 days</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label>Month:</label>
+                            <select id="cron-month">
+                                <option value="*">Every month (*)</option>
+                                <option value="1">January</option>
+                                <option value="*/3">Every 3 months</option>
+                                <option value="*/6">Every 6 months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cron-row">
+                        <div class="form-row">
+                            <label>Day of Week:</label>
+                            <select id="cron-dow">
+                                <option value="*">Any day (*)</option>
+                                <option value="0">Sunday</option>
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3">Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5">Friday</option>
+                                <option value="6">Saturday</option>
+                                <option value="1-5">Mon-Fri</option>
+                                <option value="0,6">Weekends</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button onclick="generateCron()">Generate</button>
+                </div>
+                <div class="output-section">
+                    <label>Cron Expression:</label>
+                    <input type="text" id="cron-output" readonly>
+                    <button onclick="copyToClipboard('cron-output')" class="copy-btn">Copy</button>
+                </div>
+                <div class="output-section">
+                    <label>Human Readable:</label>
+                    <input type="text" id="cron-human" readonly>
+                </div>
+                <div class="output-section">
+                    <label>Next 5 Runs:</label>
+                    <div id="cron-next" class="next-runs"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ip-calculator" class="tool-panel">
+            <h2>IP Address Calculator</h2>
+            <div class="tool-container">
+                <div class="form-row">
+                    <label>IP Address:</label>
+                    <input type="text" id="ip-address" placeholder="192.168.1.100">
+                </div>
+                <div class="form-row">
+                    <label>Subnet Mask (CIDR):</label>
+                    <input type="number" id="ip-cidr" value="24" min="0" max="32">
+                </div>
+                <div class="form-row">
+                    <label>Or Subnet Mask:</label>
+                    <input type="text" id="ip-mask" placeholder="255.255.255.0">
+                </div>
+                <div class="button-group">
+                    <button onclick="calculateIP()">Calculate</button>
+                </div>
+                <div class="ip-results">
+                    <div class="form-row">
+                        <label>Network Address:</label>
+                        <input type="text" id="ip-network" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>Broadcast Address:</label>
+                        <input type="text" id="ip-broadcast" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>First Usable Host:</label>
+                        <input type="text" id="ip-first" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>Last Usable Host:</label>
+                        <input type="text" id="ip-last" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>Total Hosts:</label>
+                        <input type="text" id="ip-total" readonly>
+                    </div>
+                    <div class="form-row">
+                        <label>Usable Hosts:</label>
+                        <input type="text" id="ip-usable" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="http-status" class="tool-panel">
+            <h2>HTTP Status Code Lookup</h2>
+            <div class="tool-container">
+                <div class="form-row">
+                    <label>Search:</label>
+                    <input type="text" id="http-search" placeholder="Search by code or name..." oninput="filterHTTPStatus()">
+                </div>
+                <div class="http-status-list" id="http-status-list">
+                </div>
+            </div>
+        </div>
+
+        <div id="curl-converter" class="tool-panel">
+            <h2>Curl to Fetch / Axios Converter</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <label>Curl Command:</label>
+                    <textarea id="curl-input" placeholder="curl -X POST https://api.example.com/data -H 'Content-Type: application/json' -d '{&quot;key&quot;:&quot;value&quot;}'"></textarea>
+                </div>
+                <div class="button-group">
+                    <button onclick="curlToFetch()">Convert to Fetch</button>
+                    <button onclick="curlToAxios()">Convert to Axios</button>
+                </div>
+                <div class="output-section">
+                    <label>Output:</label>
+                    <textarea id="curl-output" readonly></textarea>
+                    <button onclick="copyToClipboard('curl-output')" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="tools.js"></script>
+</body>
+</html>
