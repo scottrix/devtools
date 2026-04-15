@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-94fc2e0469f8bd25",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "github.com\n  ✓ Logged in to github.com account scottrix (/home/scott/.config/gh/hosts.yml)\n  - Active account: true\n  - Git operations protocol: ssh\n  - Token: gho_************************************\n  - Token scopes: 'admin:public_key', 'gist', 'read:org', 'repo'\n",
+  "timestamp": 1776281942406
+}

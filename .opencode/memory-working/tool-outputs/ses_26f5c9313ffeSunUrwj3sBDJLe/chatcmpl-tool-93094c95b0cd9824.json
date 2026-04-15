@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-93094c95b0cd9824",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "agent-ssh-socket:/run/user/1000/gnupg/S.gpg-agent.ssh\n",
+  "timestamp": 1776283105019
+}

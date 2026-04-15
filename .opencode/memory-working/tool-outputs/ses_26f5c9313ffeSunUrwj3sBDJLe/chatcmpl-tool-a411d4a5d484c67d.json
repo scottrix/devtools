@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-a411d4a5d484c67d",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "Could not open a connection to your authentication agent.\n",
+  "timestamp": 1776282261887
+}

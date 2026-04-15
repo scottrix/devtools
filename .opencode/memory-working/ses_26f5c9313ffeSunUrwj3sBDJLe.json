@@ -1,0 +1,72 @@
+{
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "slots": {
+    "error": [
+      {
+        "id": "wm_1776261594486_6527dyi",
+        "type": "error",
+        "content": "    --error: #e74c3c;",
+        "source": "tool:bash",
+        "timestamp": 1776261594485,
+        "relevanceScore": 0,
+        "mentions": 1
+      },
+      {
+        "id": "wm_1776283210487_br8kd0g",
+        "type": "error",
+        "content": "X11 forwarding request failed on channel 0\r",
+        "source": "tool:bash",
+        "timestamp": 1776286105724,
+        "relevanceScore": 0,
+        "mentions": 3
+      }
+    ],
+    "decision": [],
+    "todo": [],
+    "dependency": []
+  },
+  "pool": [
+    {
+      "id": "wm_1776256710311_a7n6d3j",
+      "type": "file-path",
+      "content": "/home/scott/src/devtools/tools.js",
+      "source": "tool:read",
+      "timestamp": 1776261636696,
+      "relevanceScore": 8.441797072656248,
+      "mentions": 6,
+      "lastEventCounter": 10
+    },
+    {
+      "id": "wm_1776255791020_4njvgje",
+      "type": "file-path",
+      "content": "tools.js",
+      "source": "tool:read",
+      "timestamp": 1776255791018,
+      "relevanceScore": 2.367893792005859,
+      "mentions": 1,
+      "lastEventCounter": 10
+    },
+    {
+      "id": "wm_1776255808759_odgen0j",
+      "type": "file-path",
+      "content": ".strength-bar.go",
+      "source": "tool:read",
+      "timestamp": 1776255808749,
+      "relevanceScore": 2.272522108242187,
+      "mentions": 1,
+      "lastEventCounter": 10
+    },
+    {
+      "id": "wm_1776256913374_d0cay9k",
+      "type": "file-path",
+      "content": "response.js",
+      "source": "tool:read",
+      "timestamp": 1776256913374,
+      "relevanceScore": 1.475375,
+      "mentions": 1,
+      "lastEventCounter": 10
+    }
+  ],
+  "eventCounter": 13,
+  "updatedAt": "2026-04-15T20:48:25.725Z"
+}

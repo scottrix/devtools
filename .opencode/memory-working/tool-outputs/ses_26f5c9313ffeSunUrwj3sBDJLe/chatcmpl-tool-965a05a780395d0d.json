@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-965a05a780395d0d",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "Host remote\nHostname home.scottrix.co.uk\nPort 443\nAddressFamily inet\nUser remote\nBatchMode yes\nIdentityFile ~/.ssh/id_ed25519\nLocalForward 20022 localhost:20022\nLocalForward 10022 localhost:22\nLocalForward 10025 localhost:25\nLocalForward 10993 localhost:993\nLocalForward 10631 localhost:631\nDynamicForward 28080 \n\nHost home\nHostname localhost\nPort 10022\nUser scott\nIdentityFile ~/.ssh/id_ed25519\n\nHost opt\nHostname optima.fritz.box\nPort 22\nUser scott\nIdentityFile ~/.ssh/id_ed25519\n\nHost aur.archlinux.org\nIdentityFile ~/.ssh/aur\nUser aur\n\nHost *\nCompression yes\nForwardX11 yes\nConnectTimeout 120\nServerAliveCountMax 3\nServerAliveInterval 120\n",
+  "timestamp": 1776282184141
+}

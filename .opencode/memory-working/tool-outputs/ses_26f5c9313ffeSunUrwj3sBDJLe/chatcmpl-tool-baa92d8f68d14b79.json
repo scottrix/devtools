@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-baa92d8f68d14b79",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "read",
+  "fullOutput": "<path>/home/scott/src/devtools/site/index.html</path>\n<type>file</type>\n<content>1: <!DOCTYPE html>\n2: <html lang=\"en\">\n3: <head>\n4:     <meta charset=\"UTF-8\">\n5:     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n6:     <title>DevTools - Developer Utilities</title>\n7:     <link rel=\"stylesheet\" href=\"styles.css\">\n8: </head>\n9: <body>\n10: <nav class=\"sidebar\">\n\n(Showing lines 1-10 of 1138. Use offset=11 to continue.)\n</content>",
+  "timestamp": 1776281959315
+}

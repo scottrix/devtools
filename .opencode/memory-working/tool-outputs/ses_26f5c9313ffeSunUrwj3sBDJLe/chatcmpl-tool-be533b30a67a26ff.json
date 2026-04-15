@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-be533b30a67a26ff",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "ssh_askpass: exec(/usr/lib/ssh/ssh-askpass): No such file or directory\r\ngit@github.com: Permission denied (publickey).\r\n",
+  "timestamp": 1776282086377
+}

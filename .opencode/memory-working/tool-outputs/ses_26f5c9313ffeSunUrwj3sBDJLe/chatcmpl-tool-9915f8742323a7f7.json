@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-9915f8742323a7f7",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "total 56\ndrwx------  2 scott users  4096 Mar  6 11:18 .\ndrwxr-xr-x 58 scott users  4096 Apr 15 20:12 ..\n-rw-------  1 scott users  2602 Mar  4 22:28 aur\n-rw-r--r--  1 scott users   566 Mar  4 22:28 aur.pub\n-rw-r--r--  1 scott users   116 Jan 17  2024 authorized_keys\nlrwxrwxrwx  1 scott users    33 May 18  2024 config -> /home/scott/src/config/ssh/config\n-rw-------  1 scott users   484 Jan 17  2024 id_ed25519\n-rw-r--r--  1 scott users    93 Mar 27  2025 id_ed25519.pub\n-rw-------  1 scott users 12889 Apr 15 17:00 known_hosts\n-rw-------  1 scott users 11333 Mar  6 11:18 known_hosts.old\n",
+  "timestamp": 1776282102315
+}

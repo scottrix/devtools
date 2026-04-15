@@ -1,0 +1,24 @@
+{
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "modelID": "z-ai/glm5",
+  "providerID": "nvidia",
+  "limits": {
+    "context": 202752,
+    "output": 131000
+  },
+  "calculated": {
+    "maxOutputTokens": 32000,
+    "reserved": 20000,
+    "usable": 170752
+  },
+  "current": {
+    "totalTokens": 113581,
+    "pressure": 0.6651810813343328,
+    "level": "safe"
+  },
+  "thresholds": {
+    "moderate": 128064,
+    "high": 153676
+  },
+  "updatedAt": "2026-04-15T21:57:31.363Z"
+}

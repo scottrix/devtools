@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-b5c8baedbc5713e7",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "X11 forwarding request failed on channel 0\r\nTo github.com:scottrix/devtools.git\n   7e75d1c..9676d23  master -> master\n",
+  "timestamp": 1776283349313
+}

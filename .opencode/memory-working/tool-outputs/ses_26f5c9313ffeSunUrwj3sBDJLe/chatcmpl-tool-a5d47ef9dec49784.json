@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-a5d47ef9dec49784",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "warning:  HTTP 404: Not Found (https://api.github.com/user/ssh_signing_keys?per_page=100)\nThis API operation needs the \"admin:ssh_signing_key\" scope. To request it, run:  gh auth refresh -h github.com -s admin:ssh_signing_key\nmain\tssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKeb36YBUAyu59h95QkbTQRifMwHdkr4wGoC/HQvR7ET\t2026-04-15T15:56:07Z\t148672782\tauthentication\n",
+  "timestamp": 1776282836188
+}

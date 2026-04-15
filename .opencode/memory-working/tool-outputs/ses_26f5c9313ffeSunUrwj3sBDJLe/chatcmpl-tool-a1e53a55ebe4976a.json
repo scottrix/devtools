@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-a1e53a55ebe4976a",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "read",
+  "fullOutput": "<path>/home/scott/src/devtools/tools.js</path>\n<type>file</type>\n<content>1580:     if (urlMatch) result.url = urlMatch[1];\n1581:     \n1582:     const methodMatch = curl.match(/-X\\s+['\"]?(\\w+)['\"]?/i);\n1583:     if (methodMatch) result.method = methodMatch[1].toUpperCase();\n1584:     \n1585:     const headerMatches = curl.matchAll(/-H\\s+['\"]([^'\"]+)['\"]/g);\n1586:     for (const match of headerMatches) {\n1587:         const [key, value] = match[1].split(': ');\n1588:         result.headers[key] = value;\n1589:     }\n1590:     \n1591:     const dataMatch = curl.match(/-d\\s+['\"](.+?)['\"]/s);\n1592:     if (dataMatch) result.body = dataMatch[1];\n1593:     \n1594:     return result;\n1595: }\n\n(End of file - total 1595 lines)\n</content>",
+  "timestamp": 1776256996113
+}

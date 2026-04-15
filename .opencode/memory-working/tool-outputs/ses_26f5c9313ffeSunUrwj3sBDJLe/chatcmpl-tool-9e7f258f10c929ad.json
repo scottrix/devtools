@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-9e7f258f10c929ad",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "fatal: could not read Username for 'https://github.com': No such device or address\n",
+  "timestamp": 1776282061936
+}

@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-9834125781a374e5",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKeb36YBUAyu59h95QkbTQRifMwHdkr4wGoC/HQvR7ET scott@cobra\n",
+  "timestamp": 1776282814487
+}

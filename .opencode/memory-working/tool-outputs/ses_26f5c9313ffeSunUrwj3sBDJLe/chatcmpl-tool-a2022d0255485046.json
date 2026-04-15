@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-a2022d0255485046",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "read",
+  "fullOutput": "<path>/home/scott/src/devtools/styles.css</path>\n<type>file</type>\n<content>1005: }\n1006: \n1007: .ascii-table .control-char {\n1008:     color: var(--warning);\n1009: }\n1010: \n1011: .ascii-table .printable-char {\n1012:     color: var(--success);\n1013: }\n1014: \n1015: .ascii-table .extended-char {\n1016:     color: var(--primary);\n1017: }\n1018:     \n1019:     .content {\n1020:         margin-left: 0;\n1021:     }\n1022:     \n1023:     body {\n1024:         flex-direction: column;\n1025:     }\n1026:     \n1027:     .markdown-container,\n1028:     .diff-container {\n1029:         grid-template-columns: 1fr;\n1030:     }\n1031:     \n1032:     .jwt-sections {\n1033:         grid-template-columns: 1fr;\n1034:     }\n\n(Showing lines 1005-1034 of 1039. Use offset=1035 to continue.)\n</content>",
+  "timestamp": 1776268123985
+}

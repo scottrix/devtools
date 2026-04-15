@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-be6555aee93f3940",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "Agent pid 30049\nssh_askpass: exec(/usr/lib/ssh/ssh-askpass): No such file or directory\r\n",
+  "timestamp": 1776282288291
+}

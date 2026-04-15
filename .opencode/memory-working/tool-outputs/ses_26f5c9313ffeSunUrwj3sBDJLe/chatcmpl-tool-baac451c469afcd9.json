@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-baac451c469afcd9",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "total 12\ndrwxr-xr-x  3 scott users 4096 Apr 15 11:15 .\ndrwxr-xr-x 11 scott users 4096 Apr 15 11:13 ..\ndrwxr-xr-x  3 scott users 4096 Apr 15 11:15 .opencode\n",
+  "timestamp": 1776248360319
+}

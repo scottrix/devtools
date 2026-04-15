@@ -1,0 +1,7 @@
+{
+  "callID": "chatcmpl-tool-af18dec57a534986",
+  "sessionID": "ses_26f5c9313ffeSunUrwj3sBDJLe",
+  "tool": "bash",
+  "fullOutput": "{\"message\":\"Invalid request.\\n\\nInvalid property /source: `\\\"{\\\\\\\"branch\\\\\\\":\\\\\\\"master\\\\\\\",\\\\\\\"path\\\\\\\":\\\\\\\"/site\\\\\\\"}\\\"` is not of type `object`.\",\"documentation_url\":\"https://docs.github.com/rest/pages/pages#create-a-apiname-pages-site\",\"status\":\"422\"}gh: Invalid request.\n\nInvalid property /source: `\"{\\\"branch\\\":\\\"master\\\",\\\"path\\\":\\\"/site\\\"}\"` is not of type `object`. (HTTP 422)\n",
+  "timestamp": 1776283230045
+}
