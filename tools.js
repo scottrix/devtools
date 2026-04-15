@@ -14,6 +14,16 @@ function toggleMobileMenu() {
     overlay.classList.toggle('active');
 }
 
+function scrollToCategory(index) {
+    if (window.innerWidth <= 768) {
+        toggleMobileMenu();
+    }
+    const categories = document.querySelectorAll('.category-header');
+    if (categories[index]) {
+        categories[index].click();
+    }
+}
+
 function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-items a');
     navLinks.forEach(link => {

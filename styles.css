@@ -803,11 +803,24 @@ input[type="range"]::-webkit-slider-thumb {
     border: 1px solid var(--border);
     text-align: center;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(74, 144, 217, 0.2);
+}
+
+.welcome-msg {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .welcome-msg {
+        text-align: center;
+        padding: 0 20px;
+    }
 }
 
 .feature-icon {

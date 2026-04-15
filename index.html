@@ -158,43 +158,43 @@
         </div>
     </nav>
 
-    <main class="content">
-        <div id="welcome" class="tool-panel active">
-            <h2>Welcome to DevTools</h2>
-            <p>Select a tool from the sidebar to get started.</p>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">📝</span>
-                    <h3>Text Tools</h3>
-                    <p>Case conversion, JSON formatting, diff checking, and more.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🎨</span>
-                    <h3>Web Tools</h3>
-                    <p>Color conversion, CSS generators, URL encoding.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">📊</span>
-                    <h3>Data Tools</h3>
-                    <p>Convert between JSON, CSV, YAML, XML formats.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🔐</span>
-                    <h3>Security Tools</h3>
-                    <p>Password generation, hashing, JWT debugging.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🔢</span>
-                    <h3>Math Tools</h3>
-                    <p>Base conversion, timestamps, bitwise operations.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🖥️</span>
-                    <h3>DevOps Tools</h3>
-                    <p>Cron expressions, IP calculations, HTTP codes.</p>
-                </div>
-            </div>
+<main class="content">
+<div id="welcome" class="tool-panel active">
+    <h2>Welcome to DevTools</h2>
+    <p class="welcome-msg">Select a tool from the sidebar to get started.</p>
+    <div class="feature-grid">
+        <div class="feature-card" onclick="scrollToCategory(0)">
+            <span class="feature-icon">📝</span>
+            <h3>Text Tools</h3>
+            <p>Case conversion, JSON formatting, diff checking, and more.</p>
         </div>
+        <div class="feature-card" onclick="scrollToCategory(1)">
+            <span class="feature-icon">🎨</span>
+            <h3>Web Tools</h3>
+            <p>Color conversion, CSS generators, URL encoding.</p>
+        </div>
+        <div class="feature-card" onclick="scrollToCategory(2)">
+            <span class="feature-icon">📊</span>
+            <h3>Data Tools</h3>
+            <p>Convert between JSON, CSV, YAML, XML formats.</p>
+        </div>
+        <div class="feature-card" onclick="scrollToCategory(3)">
+            <span class="feature-icon">🔐</span>
+            <h3>Security Tools</h3>
+            <p>Password generation, hashing, JWT debugging.</p>
+        </div>
+<div class="feature-card" onclick="scrollToCategory(4)">
+            <span class="feature-icon">🔢</span>
+            <h3>Math Tools</h3>
+            <p>Base conversion, timestamps, bitwise operations.</p>
+        </div>
+        <div class="feature-card" onclick="scrollToCategory(5)">
+            <span class="feature-icon">🖥️</span>
+            <h3>DevOps Tools</h3>
+            <p>Cron expressions, IP calculations, HTTP codes.</p>
+        </div>
+    </div>
+</div>
 
         <div id="case-converter" class="tool-panel">
             <h2>Case Converter</h2>
