@@ -1103,3 +1103,18 @@ input[type="range"]::-webkit-slider-thumb {
 .ascii-table .extended-char {
     color: var(--primary);
 }
+
+
+.disclaimer-banner {
+  background: var(--card-bg, #1e293b);
+  border: 1px solid #ffad1f;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #94a3b8);
+}
+.disclaimer-banner a {
+  color: var(--primary, #1da1f2);
+  text-decoration: underline;
+}
