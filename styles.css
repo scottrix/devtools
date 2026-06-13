@@ -44,13 +44,18 @@ body {
     flex-direction: column;
 }
 
+.app-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
 .sidebar {
     width: 280px;
     min-width: 280px;
     max-width: 280px;
     background: var(--bg-light);
     border-right: 1px solid var(--border);
-    height: 100vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -188,7 +193,6 @@ body {
 .content {
     flex: 1;
     padding: 30px;
-    height: 100vh;
     overflow-y: auto;
     background: var(--bg-dark);
 }
@@ -936,6 +940,10 @@ input[type="range"]::-webkit-slider-thumb {
     body {
         flex-direction: column;
         overflow: auto;
+    }
+
+    .app-layout {
+        flex-direction: column;
     }
     
     .site-footer {
