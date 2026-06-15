@@ -3,22 +3,31 @@
   "slots": {
     "error": [
       {
-        "id": "wm_1776261594486_6527dyi",
+        "id": "wm_1777831949536_6xfx7fd",
         "type": "error",
-        "content": "    --error: #e74c3c;",
+        "content": "X11 forwarding request failed on channel 0\r",
         "source": "tool:bash",
-        "timestamp": 1776261594485,
+        "timestamp": 1777831949535,
         "relevanceScore": 0,
         "mentions": 1
       },
       {
-        "id": "wm_1776283210487_br8kd0g",
+        "id": "wm_1777823420159_jxp9v42",
         "type": "error",
-        "content": "X11 forwarding request failed on channel 0\r",
+        "content": "        for e in t[\"common_errors\"]",
         "source": "tool:bash",
-        "timestamp": 1776349936121,
+        "timestamp": 1777823420158,
         "relevanceScore": 0,
-        "mentions": 11
+        "mentions": 1
+      },
+      {
+        "id": "wm_1777823420163_nkc2ngy",
+        "type": "error",
+        "content": "KeyError: 'right'",
+        "source": "tool:bash",
+        "timestamp": 1777823420158,
+        "relevanceScore": 0,
+        "mentions": 1
       }
     ],
     "decision": [],
@@ -27,56 +36,76 @@
   },
   "pool": [
     {
+      "id": "wm_1776426649155_y3kqpnh",
+      "type": "file-path",
+      "content": "/home/scott/src/fintools/tools.js",
+      "source": "tool:read",
+      "timestamp": 1776470188637,
+      "relevanceScore": 36.907258954970786,
+      "mentions": 23,
+      "lastEventCounter": 237
+    },
+    {
       "id": "wm_1776256710311_a7n6d3j",
       "type": "file-path",
       "content": "/home/scott/src/devtools/tools.js",
       "source": "tool:read",
       "timestamp": 1776296076420,
-      "relevanceScore": 9.863451781854838,
+      "relevanceScore": 12.837307462599789,
       "mentions": 8,
-      "lastEventCounter": 25
+      "lastEventCounter": 237
     },
     {
-      "id": "wm_1776255791020_4njvgje",
+      "id": "wm_1777681603004_oscxzin",
       "type": "file-path",
-      "content": "tools.js",
+      "content": "/tmp/bs_gen.py",
       "source": "tool:read",
-      "timestamp": 1776358399227,
-      "relevanceScore": 1.8646293197755295,
+      "timestamp": 1777685905553,
+      "relevanceScore": 6.413489448582389,
+      "mentions": 4,
+      "lastEventCounter": 237
+    },
+    {
+      "id": "wm_1777770351004_puhp7ad",
+      "type": "file-path",
+      "content": "/tmp/ci_gen.py",
+      "source": "tool:read",
+      "timestamp": 1777770655085,
+      "relevanceScore": 4.596439774862768,
+      "mentions": 3,
+      "lastEventCounter": 237
+    },
+    {
+      "id": "wm_1777818414899_3af0na1",
+      "type": "file-path",
+      "content": "/tmp/ms_gen.py",
+      "source": "tool:read",
+      "timestamp": 1777818692529,
+      "relevanceScore": 2.5798365624999997,
       "mentions": 2,
-      "lastEventCounter": 25
+      "lastEventCounter": 237
     },
     {
-      "id": "wm_1776255808759_odgen0j",
+      "id": "wm_1777818692532_ku6dr7x",
       "type": "file-path",
-      "content": ".strength-bar.go",
+      "content": "/tmp/ms_data.js",
       "source": "tool:read",
-      "timestamp": 1776255808749,
-      "relevanceScore": 1.3562982008159825,
+      "timestamp": 1777818692529,
+      "relevanceScore": 1.114125,
       "mentions": 1,
-      "lastEventCounter": 25
+      "lastEventCounter": 237
     },
     {
-      "id": "wm_1776256913374_d0cay9k",
+      "id": "wm_1777828364091_wmanoo5",
       "type": "file-path",
-      "content": "response.js",
+      "content": "/home/scott/src/gcserevise/app.js",
       "source": "tool:read",
-      "timestamp": 1776256913374,
-      "relevanceScore": 1.2866640376666654,
+      "timestamp": 1777828364091,
+      "relevanceScore": 1,
       "mentions": 1,
-      "lastEventCounter": 25
-    },
-    {
-      "id": "wm_1776348933161_oqamoh5",
-      "type": "file-path",
-      "content": "/home/scott/src/scottrix.github.io/README.md",
-      "source": "tool:read",
-      "timestamp": 1776348933161,
-      "relevanceScore": 1.2225,
-      "mentions": 1,
-      "lastEventCounter": 25
+      "lastEventCounter": 237
     }
   ],
-  "eventCounter": 25,
-  "updatedAt": "2026-04-16T16:53:19.227Z"
+  "eventCounter": 238,
+  "updatedAt": "2026-05-03T18:12:29.536Z"
 }
