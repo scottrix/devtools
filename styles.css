@@ -1218,6 +1218,9 @@ input[type="range"]::-webkit-slider-thumb {
    margin-bottom: 12px;
    text-decoration: none;
  }
+ .fastmail-topbar[hidden] {
+   display: none !important;
+ }
  .fastmail-topbar img {
    display: block;
    width: 100%;
